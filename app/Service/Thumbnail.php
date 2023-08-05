@@ -14,8 +14,7 @@ class Thumbnail
 
         $imagick->setIteratorIndex(0);
 
-        $thumbnailFile = $thumbnailPath . basename($temp) . '.jpg';
-        $imagick->writeImage($thumbnailFile);
+        $imagick->writeImage($thumbnailPath);
 
         $imagick->clear();
         $imagick->destroy();

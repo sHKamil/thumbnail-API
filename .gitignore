@@ -1,0 +1,3 @@
+.vscode
+app/thumbnails/*
+!app/thumbnails/test.jpg
