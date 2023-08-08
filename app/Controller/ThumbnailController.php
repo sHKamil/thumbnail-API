@@ -4,6 +4,7 @@ namespace Controller;
 
 
 use Service\Thumbnail;
+use Controller\UrlController;
 
 class ThumbnailController
 {
@@ -11,8 +12,8 @@ class ThumbnailController
     public $thumbnail_path;
     public $image_name;
 
-    public function __construct($uri) {
-        if($uri === '/api' && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
+    public function __construct() {
+        if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
             $this->setParams();
             $this->generateThumbnail();
             $link = $this->_prepareLink();

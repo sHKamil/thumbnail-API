@@ -5,5 +5,6 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 spl_autoload_register('autoloader');
 
 use Controller\ThumbnailController;
+use Controller\UrlController;
 
-new ThumbnailController($uri);
+new ModeController(new UrlController($uri));
