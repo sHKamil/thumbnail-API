@@ -4,7 +4,6 @@ namespace Controller;
 
 
 use Service\Thumbnail;
-use Controller\UrlController;
 
 class ThumbnailController
 {
