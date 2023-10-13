@@ -1,0 +1,9 @@
+services:
+  web:
+    hostname: thumbnail
+    networks:
+      - proxy
+networks:
+  proxy:
+    external: true
+
